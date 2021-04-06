@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/amount"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextAmount"
+        app:layout_constraintStart_toStartOf="@+id/buttonFromCopper"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toEndOf="@+id/textViewAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/from"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAmount" />
+
+    <Button
+        android:id="@+id/buttonFromCopper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/copper"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonFromSilver"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFromSilver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonFromSilver" />
+
+    <Button
+        android:id="@+id/buttonFromSilver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/silver"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFromGold"
+        app:layout_constraintStart_toEndOf="@+id/buttonFromCopper"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFrom" />
+
+    <Button
+        android:id="@+id/buttonFromGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/gold"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonFromSilver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonFromSilver"
+        app:layout_constraintTop_toTopOf="@+id/buttonFromSilver" />
+
+    <Button
+        android:id="@+id/buttonToGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/gold"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonToSilver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonToSilver"
+        app:layout_constraintTop_toTopOf="@+id/buttonToSilver" />
+
+    <Button
+        android:id="@+id/buttonToSilver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/silver"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonToGold"
+        app:layout_constraintStart_toEndOf="@+id/buttonToCopper"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTo" />
+
+    <Button
+        android:id="@+id/buttinCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="@string/calculate"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonToGold"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toEndOf="@+id/buttonToCopper"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTo" />
+
+    <Button
+        android:id="@+id/buttonToCopper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/copper"
+        android:textColor="#000000"
+        app:backgroundTint="#B5B3B3"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonToSilver"
+        app:layout_constraintEnd_toStartOf="@+id/buttonToSilver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonToSilver" />
+
+    <TextView
+        android:id="@+id/textViewConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttinCalculate" />
+
+    <TextView
+        android:id="@+id/textViewConversions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConvert" />
+
+    <TextView
+        android:id="@+id/textViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/to"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFromSilver" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
